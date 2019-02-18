@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Indice 
 Route::get('home','HomeController@index');
+
+//Carrito
+Route::get('cart/show', 'CartContoller@show');

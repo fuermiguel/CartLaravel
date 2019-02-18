@@ -21,7 +21,10 @@ Route::get('/', function () {
 });
 
 //Indice 
-Route::get('home','HomeController@index');
+Route::get('home',[
+    'as' => 'home',
+    'uses' => 'HomeController@index'
+]);
 
 //Carrito ----------------
 

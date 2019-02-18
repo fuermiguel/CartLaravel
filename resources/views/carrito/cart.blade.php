@@ -55,7 +55,14 @@
             </tbody>
         </table>
      </div>  
+    <p>
+        <a href="{{route('home')}}" class="btn btn-primary"></a>
+        <i class="fs-chevroncircle-left"></i>Seguir comprando
 
+        <a href="#" class="btn btn-primary"></a>
+        continuar<i class="fs-chevroncircle-right"></i>
+        
+    </p>
     </div>
 </body>
 

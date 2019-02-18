@@ -19,7 +19,8 @@ class CartContoller extends Controller
     //Show cart
     public function show(){
         //Obtengo mi variable de sesión.
-        return \Session::get('cart');
+        $cart = \Session::get('cart');
+        return view('carrito.cart', compact('cart'));
     }
 
     //Add item
@@ -38,6 +39,14 @@ class CartContoller extends Controller
     }
 
     //Delete item
+
+    public function delete(Product $product){
+        $cart = \Session::get('cart');
+        unset($cart[$product->id]);
+        \Session::put('cart',$cart);
+
+        return redirect()->route('cart-show');
+    }
 
     //Update item
 

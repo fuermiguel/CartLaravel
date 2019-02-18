@@ -14,7 +14,15 @@
 <body>
     <div class="container text-center">
     <div class="page-header">
-        <h1><i class="fa fa-shopping-cart></i>Carrito de compras</h1>
+        <h1><i class="fa fa-shopping-cart"></i>Carrito de compras</h1>
+    </div>
+    <div>
+        <p>
+            <a href="{{ route('cart-trash') }}" class="btn btn-danger">
+                Vaciar carrito <i class="fa fa-trash"></i>
+            </a>
+        </p>
+    
     </div>
 
      <div class="table-responsive">

@@ -52,5 +52,10 @@ class CartContoller extends Controller
 
     //Trash cart
 
+    public function trash(){
+        \Session::forget('cart');
+
+        return redirect()->route('cart-show');
+    }
     //Total
 }

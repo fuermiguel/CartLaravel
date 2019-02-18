@@ -32,7 +32,7 @@
 
                         <a href="#" class="btn btn-success btn-block">{{$producto->price}}€</a>
                         <br>
-                        <a href=" {{ $producto->id }}" class="btn btn-warning">Lo quiero</a>
+                        <a href=" {{ route('cart-add',$producto->id) }}" class="btn btn-warning">Lo quiero</a>
                         <a href=" {{ $producto->id }}" class="btn btn-primary">Detalles</a>
 
                     </div>

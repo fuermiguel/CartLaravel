@@ -11,6 +11,11 @@
 |
 */
 
+//Esat ruta s para ahorrarnos código en los métodos del controlador(no repetir código)
+Route::bind('product',function($id){
+    return App\Product::Where('id',$id)->first();
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,5 +23,14 @@ Route::get('/', function () {
 //Indice 
 Route::get('home','HomeController@index');
 
-//Carrito
-Route::get('cart/show', 'CartContoller@show');
+//Carrito ----------------
+
+Route::get('cart/show', [
+    'as' =>'cart-show',
+    'uses' => 'CartContoller@show'
+]);
+
+Route::get('cart/add/{product}', [
+    'as' => 'cart-add',
+    'uses' => 'CartContoller@add'
+]);
